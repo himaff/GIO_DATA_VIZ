@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DEMO</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r90/three.min.js"></script>
+        <script src="https://raw.githack.com/syt123450/giojs/master/build/gio.min.js"></script>
+        <script src="https://raw.githack.com/syt123450/giojs/master/assets/data/sampleData.js"></script>
+        <script src="./assets/js/main.js" />
+</head>
+    <body>
+        <div id="zoneArea" style="width: 500px; height: 500px; background-color: red"></div>
+        
+        <script>
+        $(function () {
+
+                // Get the container to hold the IO globe
+                var container = document.getElementById( "zoneArea" );
+
+                // Create Gio.controller
+                var controller = new GIO.Controller( container );
+
+                // Add data
+                controller.addData( data );
+
+                // Initialize and render the globe
+                controller.init();
+        });
+</script>
+    </body>
+</html>
